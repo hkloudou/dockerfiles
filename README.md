@@ -5,4 +5,4 @@
 
 [![shadowsocks-libev](https://github.com/hkloudou/dockerfiles/actions/workflows/shadowsocks-libev.yaml/badge.svg)](https://github.com/hkloudou/dockerfiles/actions/workflows/shadowsocks-libev.yaml)
 
-[![shadowsocks-libev](https://github.com/hkloudou/dockerfiles/actions/workflows/simple-obfs.yaml/badge.svg)](https://github.com/hkloudou/dockerfiles/actions/workflows/simple-obfs.yaml)
+[![simple-obfs](https://github.com/hkloudou/dockerfiles/actions/workflows/simple-obfs.yaml/badge.svg)](https://github.com/hkloudou/dockerfiles/actions/workflows/simple-obfs.yaml)
