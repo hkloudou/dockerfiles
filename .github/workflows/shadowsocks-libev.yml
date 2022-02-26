@@ -19,7 +19,7 @@ jobs:
         run: |
           VERSION=${{ github.event.inputs.version }}
           IMAGE_NAME=shadowsocks-libev
-          TAGS="hkloudou/${IMAGE_NAME}:${VERSION}"
+          TAGS="${{ secrets.DOCKERHUB_USERNAME }}/${IMAGE_NAME}:${VERSION}"
           echo ::set-output name=build_args::VERSION=${VERSION}
           echo ::set-output name=image-name::${IMAGE_NAME}
           echo ::set-output name=tags::${TAGS}
