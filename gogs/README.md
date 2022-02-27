@@ -5,7 +5,7 @@ Automatically built by Github Actions
 #### Creating an instance:
 
     docker run \
-        -d 
+        -d \
         --name gogs \
         -p 3000:3000 \
         -p 22:22 \

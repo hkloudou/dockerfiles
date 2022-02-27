@@ -23,5 +23,5 @@ RUN apk add --no-cache curl build-base git libcap && \
 FROM alpine:3.15
 
 COPY --from=builder /gogs /usr/bin/
-
+RUN apk update && apk add --no-cache git openssh-keygen
 CMD ["/usr/bin/gogs", "web"]
