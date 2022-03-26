@@ -2,11 +2,11 @@ name: mqxd
 
 on:
   workflow_dispatch:
-    # inputs:
-    #   version:
-    #     description: 'version'
-    #     required: true
-    #     default: '0.39.1'
+    inputs:
+      version:
+        description: 'version'
+        required: true
+        default: 'latest'
 
 jobs:
   build:
