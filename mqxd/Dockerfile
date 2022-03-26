@@ -13,8 +13,12 @@ ENV GOOS=$TARGETOS \
 # RUN mkdir -p /root/mqxd && cd /root/mqxd && \
 #     curl -sSL https://github.com/hkloudou/mqx/archive/refs/heads/main.zip | \
 #     tar xz --strip 1
-ADD https://github.com/hkloudou/mqx/archive/refs/heads/main.zip /root/mqxd
-RUN cd /root/mqxd/app/mqxd && ../../scripts/gobuild.sh mqxd /mqxd
+ADD https://github.com/hkloudou/mqx/archive/refs/heads/main.zip /root/mqxd/mqxd.zip
+RUN cd /root/mqxd/ && unzip ./mqxd.zip -d ./
+# RUN cd / && ls
+# RUN file="$(ls -1 /)" && echo $file
+RUN cd /root/mqxd/mqx-main/app/mqxd && go build -v -ldflags "-s -w" -o /mqxd .
+# && sh ../../scripts/gobuild.sh mqxd /mqxd
 
 FROM alpine:3.15
 
