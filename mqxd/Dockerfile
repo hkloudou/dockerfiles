@@ -9,6 +9,7 @@ ARG CGO_ENABLED=off
 ENV GOOS=$TARGETOS \
     GOARCH=$TARGETARCH
 # https://github.com/hkloudou/mqx/archive/refs/heads/main.zip
+RUN apk add --no-cache curl
 RUN mkdir -p /root/mqxd && cd /root/mqxd && \
     curl -sSL https://github.com/hkloudou/mqx/archive/refs/heads/main.zip | \
     tar xz --strip 1
