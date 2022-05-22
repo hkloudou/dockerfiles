@@ -23,7 +23,7 @@ RUN git clone -b v${VERSION} https://github.com/hkloudou/mqx --single-branch /ro
 # RUN cd /root/mqxd/ && unzip ./mqxd.zip -d ./
 # RUN cd / && ls
 # RUN file="$(ls -1 /)" && echo $file
-RUN cd /root/mqxd/mqx-main/app/mqxd && ../../scripts/gobuild.sh mqxd /mqxd
+RUN cd /root/mqxd/mqx-main/app/mqxd && /root/mqxd/mqx-main/scripts/gobuild.sh mqxd /mqxd
 # && sh ../../scripts/gobuild.sh mqxd /mqxd
 
 FROM alpine:3.15
