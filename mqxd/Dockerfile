@@ -18,7 +18,7 @@ RUN set -ex && \
     apk add --no-cache \
         --virtual .build-deps \
         git
-RUN git clone -b v${VERSION} https://github.com/hkloudou/mqx --single-branch /root/mqxd/mqx-main/
+RUN git clone -b v${VERSION} https://github.com/hkloudou/mqx --single-branch /root/mqxd/mqx-main
 
 # RUN cd /root/mqxd/ && unzip ./mqxd.zip -d ./
 # RUN cd / && ls
