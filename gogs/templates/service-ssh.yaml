@@ -1,0 +1,20 @@
+ {{- if (not (empty .Values.serviceSsh.type))}}
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ include "gogs.fullname" . }}-ssh
+  labels:
+    {{- include "gogs.labels" . | nindent 4 }}
+spec:
+  type: {{ .Values.serviceSsh.type }}
+  {{- if and (eq .Values.serviceSsh.type "LoadBalancer") .Values.serviceSsh.loadBalancerIP }}
+  loadBalancerIP: {{ .Values.serviceSsh.loadBalancerIP }}
+  {{- end }}
+  ports:
+    - port: {{ .Values.serviceSsh.port }}
+      targetPort: 22
+      protocol: TCP
+      name: {{ include "gogs.fullname" . }}-ssh
+  selector:
+    {{- include "gogs.selectorLabels" . | nindent 4 }}
+{{- end }}
