@@ -1,2 +1,2 @@
-ddddocr=1.4.8
+ddddocr=1.4.7
 flask
