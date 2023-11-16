@@ -6,7 +6,7 @@ on:
       version:
         description: 'version'
         required: true
-        default: '0.0.1'
+        default: '1.4.8'
 jobs:
   build:
     runs-on: ubuntu-latest
