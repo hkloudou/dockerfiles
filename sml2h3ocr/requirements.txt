@@ -1,2 +1,2 @@
 ddddocr==1.4.6
-flask
+flask==3.0.0
