@@ -4,7 +4,7 @@ WORKDIR /app
 
 ADD ./*.txt ./*.py ./*.sh ./*.onnx ./
 
-RUN sed -i 's#http://deb.debian.org#http://mirrors.aliyun.com/#g' /etc/apt/sources.list
+RUN sed -i 's#http://deb.debian.org#http://mirrors.aliyun.com#g' /etc/apt/sources.list
 RUN apt-get --allow-releaseinfo-change update && apt install libgl1-mesa-glx libglib2.0-0 -y
 
 RUN cd /app \
