@@ -13,6 +13,8 @@ RUN apt-get update && apt-get install -y \
 # RUN sed -i 's#http://deb.debian.org#http://mirrors.aliyun.com#g' /etc/apt/sources.list
 # RUN apt-get --allow-releaseinfo-change update && apt install libgl1-mesa-glx libglib2.0-0 -y
 
+ADD ./*.txt
+
 RUN cd /app \
     && python3 -m pip install --upgrade pip \
     && pip3 install --no-cache-dir -r requirements.txt \
