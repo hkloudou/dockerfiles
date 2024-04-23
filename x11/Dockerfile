@@ -16,8 +16,8 @@ RUN apt-get update && apt-get install -y \
 ADD ./*.txt ./
 
 RUN cd /app \
-    && python3 -m pip install --upgrade pip \
-    && pip3 install --no-cache-dir -r requirements.txt \
+    && python3 -m pip install --upgrade pip -i https://mirrors.aliyun.com/pypi/simple/\
+    && pip3 install --no-cache-dir -r requirements.txt --extra-index-url https://mirrors.aliyun.com/pypi/simple/ \
     && rm -rf /tmp/* && rm -rf /root/.cache/*
 
 # CMD ["python3", "ocr_server.py", "--port", "80", "--ocr", "--det"]
