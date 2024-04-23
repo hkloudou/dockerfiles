@@ -1,6 +1,7 @@
 # Start from a Python 3.8 slim image based on Debian Buster
 FROM python:3.8-slim-buster
 
+RUN sed -i 's#http://deb.debian.org#http://mirrors.aliyun.com#g' /etc/apt/sources.list
 # Install system dependencies (if any)
 RUN apt-get update && apt-get install -y \
     curl xvfb scrot x11-utils \
