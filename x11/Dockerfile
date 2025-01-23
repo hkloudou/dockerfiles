@@ -1,5 +1,5 @@
 # Start from a Python 3.8 slim image based on Debian Buster
-FROM debian:stable-slim
+FROM debian:buster-slim
 
 WORKDIR /app
 ADD ./*.txt ./
@@ -7,7 +7,7 @@ ADD ./*.txt ./
 
 # RUN sed -i 's#http://deb.debian.org#http://mirrors.aliyun.com#g' /etc/apt/sources.list
 # Install system dependencies (if any)
-RUN apt-get update && apt-get install -y curl xserver-xvfb scrot x11-utils musl && rm -rf /var/lib/apt/lists/*
+RUN apt-get update && apt-get install -y curl xvfb scrot x11-utils musl && rm -rf /var/lib/apt/lists/*
 
 
 # RUN apt-get --allow-releaseinfo-change update && 
