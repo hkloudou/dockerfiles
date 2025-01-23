@@ -8,14 +8,16 @@ ADD ./*.txt ./
 # RUN sed -i 's#http://deb.debian.org#http://mirrors.aliyun.com#g' /etc/apt/sources.list
 # Install system dependencies (if any)
 RUN apt-get update && apt-get install -y \
-    curl xvfb scrot x11-utils \
+    curl xvfb scrot x11-utils musl \
     && rm -rf /var/lib/apt/lists/*
+
+
 # RUN apt-get --allow-releaseinfo-change update && 
 # Example: Install additional Python packages or scripts
 # RUN pip install playwright
 
 # RUN sed -i 's#http://deb.debian.org#http://mirrors.aliyun.com#g' /etc/apt/sources.list
-# RUN apt-get --allow-releaseinfo-change update && apt install libgl1-mesa-glx libglib2.0-0 -y
+# RUN apt-get --allow-releaseinfo-change update && apt install musl  -y
 
 
 
