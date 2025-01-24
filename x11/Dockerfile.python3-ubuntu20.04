@@ -25,5 +25,5 @@ RUN cd /app \
     && rm -rf /tmp/* && rm -rf /root/.cache/*
 
 # Install Playwright and dependencies
-RUN playwright install chrome
+RUN playwright install
 # RUN playwright install-deps   # Uncomment if you need additional dependencies for Playwright
