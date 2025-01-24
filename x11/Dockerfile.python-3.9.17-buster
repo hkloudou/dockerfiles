@@ -2,7 +2,7 @@
 FROM python:3.9.17-buster
 
 WORKDIR /app
-# ADD ./*.txt ./
+ADD ./*.txt ./
 
 
 # RUN sed -i 's#http://deb.debian.org#http://mirrors.aliyun.com#g' /etc/apt/sources.list
