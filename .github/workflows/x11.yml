@@ -6,7 +6,7 @@ on:
       version:
         description: 'version'
         required: true
-        default: 'python-3.9.17-buster'
+        default: 'python-3.9.17-slim-buster'
 jobs:
   build:
     runs-on: ubuntu-latest
