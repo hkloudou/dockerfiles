@@ -1,4 +1,4 @@
-name: x11
+name: mongodb
 
 on:
   workflow_dispatch:
