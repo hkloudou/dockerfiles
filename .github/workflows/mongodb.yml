@@ -35,7 +35,7 @@ jobs:
       - name: Build
         uses: docker/build-push-action@v2
         with:
-          context: ./${{ steps.prepare.outputs.image-name }}
+          context: ./${{ steps.prepare.outputs.image-name }}/${{ github.event.inputs.version }}
           file: ./${{ steps.prepare.outputs.image-name }}/${{ github.event.inputs.version }}/Dockerfile
           platforms: linux/arm64
           push: ${{ github.event_name != 'pull_request' }}
