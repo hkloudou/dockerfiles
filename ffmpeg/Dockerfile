@@ -3,7 +3,7 @@ FROM debian:bullseye-slim
 RUN apt update && apt install -y \
     locales \
     p7zip-full \
-    ffmpeg=4.3.8-0 \
+    ffmpeg=7:4.3.8-0+deb11u1 \
     musl
 
 
