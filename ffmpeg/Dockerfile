@@ -6,7 +6,7 @@ RUN apt update && apt install -y --no-install-recommends \
     p7zip-full \
     ca-certificates \
     openssl \
-    ffmpeg=7:4.3.8-0+deb11u1 && \
+    ffmpeg=7:4.3.8-0+deb11u2 && \
     rm -rf /var/lib/apt/lists/* &&  update-ca-certificates
 
 # 配置中文支持
