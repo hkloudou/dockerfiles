@@ -6,6 +6,7 @@ RUN apt update && apt install -y --no-install-recommends \
     p7zip-full \
     ffmpeg=7:4.3.8-0+deb11u1 && \
     rm -rf /var/lib/apt/lists/*
+
 # 更新 cert
 RUN apt-get update && apt-get install -y ca-certificates bash wget openssl && update-ca-certificates && rm -rf /var/lib/apt/lists/*
 
