@@ -4,11 +4,10 @@ FROM debian:bullseye-slim
 RUN apt update && apt install -y --no-install-recommends \
     locales \
     p7zip-full \
+    ca-certificates \
+    openssl \
     ffmpeg=7:4.3.8-0+deb11u1 && \
-    rm -rf /var/lib/apt/lists/*
-
-# 更新 cert
-RUN apt update && apt install -y ca-certificates bash wget openssl && update-ca-certificates && rm -rf /var/lib/apt/lists/*
+    rm -rf /var/lib/apt/lists/* &&  update-ca-certificates
 
 # 配置中文支持
 RUN sed -i 's/# zh_CN.UTF-8 UTF-8/zh_CN.UTF-8 UTF-8/' /etc/locale.gen && \
