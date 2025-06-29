@@ -1,4 +1,4 @@
-FROM alpine:3.19  # 使用更新的版本
+FROM alpine:3.19
 
 RUN apk update && apk add --no-cache \
     ca-certificates \
